@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="hi"><head><meta charset="utf-8"><title>MDOTPRO | UPVC Business Suite</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#102f29"><meta name="apple-mobile-web-app-capable" content="yes"><link rel="manifest" href="manifest.json"><link rel="icon" href="icon.svg">
+<style>
+:root{--bg:#f2f5f3;--cd:#fff;--tx:#10231f;--mu:#5d6f6a;--g:#102f29;--g2:#1b4a40;--au:#e0a82e;--bd:#dbe4e0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px)}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0b1512;--cd:#13231e;--tx:#e6f0ec;--mu:#92a8a1;--bd:#244037;--g:#0c211c}}
+:root[data-theme="dark"]{--bg:#0b1512;--cd:#13231e;--tx:#e6f0ec;--mu:#92a8a1;--bd:#244037;--g:#0c211c}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:system-ui,-apple-system,"Segoe UI",sans-serif;padding-bottom:84px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--g);z-index:10}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--g);color:#fff;padding:10px 14px;display:flex;align-items:center;gap:10px}
+.lg{width:34px;height:34px;border-radius:9px;background:var(--au);color:var(--g);display:grid;place-items:center;font-weight:800}
+header b{font-size:16px;letter-spacing:.5px}header small{display:block;font-size:10px;opacity:.7;letter-spacing:1.5px}
+main{max-width:680px;margin:auto;padding:12px}
+.pg[hidden]{display:none}h1{font-size:20px;margin:4px 0 10px}h2{font-size:14px;margin:0 0 8px;color:var(--g2)}
+@media(prefers-color-scheme:dark){h2{color:var(--au)}}
+.cd{background:var(--cd);border:1px solid var(--bd);border-radius:14px;padding:12px;margin-bottom:10px}
+.g{display:grid;grid-template-columns:1fr 1fr;gap:8px}label{font-size:12px;color:var(--mu);display:block;margin-bottom:2px}
+input,select{width:100%;padding:9px;border:1px solid var(--bd);border-radius:9px;background:var(--bg);color:var(--tx);font-size:15px}
+button.b{width:100%;padding:12px;border:0;border-radius:11px;background:var(--au);color:#1c1400;font-size:15px;font-weight:700;margin-top:8px}
+button.b.s{background:var(--g2);color:#fff}button.b.w{background:#1fa855;color:#fff}
+.st{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-bottom:10px}.st div{background:var(--g);color:#fff;border-radius:14px;padding:12px}.st b{font-size:22px;display:block}.st span{font-size:11px;opacity:.75}
+.hero{background:linear-gradient(135deg,var(--g),var(--g2));color:#fff;border-radius:16px;padding:16px;margin-bottom:10px}.hero h1{margin:0 0 4px}.hero p{margin:0;opacity:.8;font-size:13px}
+.tot{background:var(--g);color:#fff;border-radius:14px;padding:14px;text-align:center}.tot b{font-size:30px;display:block}.tot span{font-size:12px;opacity:.8}
+.sc{overflow-x:auto}table{border-collapse:collapse;width:100%;font-size:12px}th,td{padding:5px 6px;border-bottom:1px solid var(--bd);text-align:right;white-space:nowrap}th:first-child,td:first-child,td.l,th.l{text-align:left}tr.t td{font-weight:700}
+.it{display:flex;justify-content:space-between;gap:8px;padding:8px 0;border-bottom:1px solid var(--bd);font-size:13px}.it small{color:var(--mu);display:block}.it a{color:#d33;font-size:12px}
+.row{display:flex;gap:6px}.row button{margin-top:6px;padding:9px;font-size:13px}.note{font-size:12px;color:var(--mu);background:var(--bg);border-left:3px solid var(--au);padding:8px;border-radius:6px}
+#e_dr{display:block;margin:0 auto 8px}.hid{display:none}
+nav{position:fixed;left:0;right:0;bottom:0;z-index:9;display:flex;background:var(--cd);border-top:1px solid var(--bd);padding-bottom:env(safe-area-inset-bottom,0px)}
+nav button{flex:1;border:0;background:none;color:var(--mu);padding:9px 0 8px;font-size:11px}nav button i{display:block;font-style:normal;font-size:19px}nav button.on{color:var(--g2);font-weight:700}
+@media(prefers-color-scheme:dark){nav button.on{color:var(--au)}}
+#pr{display:none}@media print{body>*:not(#pr){display:none!important}body::before{display:none}#pr{display:block!important;color:#000;background:#fff;padding:16px}#pr table{font-size:13px}}
+.qd{background:#fff;color:#14231f;font-size:12px;line-height:1.45;border:1px solid #d9e2de;border-radius:6px;padding:18px;width:720px;min-width:720px}
+.qd .hd{display:flex;justify-content:space-between;gap:14px;align-items:flex-start;border-bottom:3px solid #102f29;padding-bottom:12px}
+.qd .hd img{max-height:64px;max-width:150px;object-fit:contain;display:block;margin-bottom:6px}
+.qd h1{font-size:20px;margin:0;color:#102f29;letter-spacing:2px}.qd .bn{font-size:17px;font-weight:800;color:#102f29}.qd .mt{text-align:right}.qd .mt b{font-size:16px;color:#102f29}
+.qd .bx{display:flex;gap:12px;margin:12px 0}.qd .bx>div{flex:1;background:#f2f6f4;border-radius:6px;padding:8px 10px}.qd .bx small{display:block;color:#5d6f6a;font-size:10px;letter-spacing:1px;text-transform:uppercase}
+.qd table{width:100%;border-collapse:collapse;font-size:12px}.qd th{background:#102f29;color:#fff;padding:7px 6px;text-align:right}.qd th.l,.qd td.l{text-align:left}.qd td{padding:8px 6px;border-bottom:1px solid #e1e8e5;vertical-align:top;white-space:normal;text-align:right}
+.qd .sk{width:90px;flex:none;color:#14231f}.qd .sum{margin-left:auto;width:270px;margin-top:10px}.qd .sum div{display:flex;justify-content:space-between;padding:4px 0}.qd .sum .gt{background:#102f29;color:#fff;padding:8px;border-radius:6px;font-weight:800;font-size:14px}
+.qd .tc{margin-top:14px;font-size:11px;color:#3d514b;white-space:pre-line}.qd .sg{display:flex;justify-content:space-between;margin-top:34px;font-size:11px}.qd .sg div{border-top:1px solid #8a9a95;padding-top:4px;width:40%;text-align:center}
+.lgi{width:34px;height:34px;border-radius:9px;object-fit:contain;background:#fff}#pr .qd{border:0;padding:0;min-width:0;width:auto}
+.bars{display:flex;gap:5px;align-items:flex-end;height:80px}.bars i{flex:1;background:var(--au);border-radius:4px 4px 0 0;min-height:4px}
+.qd .pgx{padding:12px 0;border-bottom:2px dashed #cfd9d5}.qd .pgx:last-child{border:0}
+.qd .lh{display:flex;gap:14px;align-items:center;border-bottom:2px solid #333;padding-bottom:10px;margin-bottom:12px}.qd .lh img{max-height:70px;max-width:150px;object-fit:contain}.qd .lh .t{flex:1;text-align:right;font-size:11px}.qd .lh .bn{font-size:18px}
+.qd table.kv{margin:0}.qd table.kv td,.qd table.kv th{padding:6px 8px;border:1px solid #d5dedb;text-align:left;white-space:normal;font-weight:400;background:none;color:#14231f}.qd table.kv th{background:#7b8481;color:#fff;font-weight:700}.qd table.kv td.a{background:#e6ecf4;font-weight:700;width:18%}
+.qd .wb{display:grid;grid-template-columns:1.1fr 1fr;border:1px solid #d5dedb;margin-top:6px}.qd .wb>div{padding:6px}.qd .wb .r{padding:0}.qd .wb h4{margin:0;background:#aec3dc;padding:6px 8px;font-size:12px}.qd .wb svg{width:100%;height:auto}
+.qd .ft{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:14px}.qd .ft span{border:1px solid #1f6b4a;color:#1f6b4a;border-radius:99px;padding:3px 10px;font-size:10px}
+@media print{#pr .qd .pgx{break-after:page;border:0}}
+</style></head><body>
+<header><div class="lg" id="hl">M</div><div><b id="hb">MDOTPRO</b><small>UPVC BUSINESS SUITE</small></div></header>
+<main>
+<section class="pg" id="p_home"><div class="hero"><div id="h_lg"></div><h1 id="h_t">MDOTPRO</h1><p>Enter a window size and get instant profile, glass and hardware pricing with a customer-ready quotation.</p><button class="b" data-go="est">+ New Estimate</button></div>
+<div class="st"><div><b id="h_q">0</b><span>Saved quotations</span></div><div><b id="h_v">₹0</b><span>Total quote value</span></div><div><b id="h_p">0</b><span>Profile records</span></div><div><b id="h_i">0</b><span>Current quote items</span></div></div>
+<div class="cd"><h2>Quotation value (last 7)</h2><div class="bars" id="h_b"></div></div>
+<div class="cd"><h2>Quick actions</h2><div class="row"><button class="b s" data-go="est">Estimate</button><button class="b s" data-go="profiles">Profiles</button><button class="b s" data-go="rates">Rates</button></div></div>
+<div class="cd"><h2>Recent quotations</h2><div id="h_r"></div></div>
+<div class="cd"><h2>Modules</h2><div class="it"><span>Design &amp; Estimation<small>Sliding, Casement, Fixed, Mesh</small></span><span>Live</span></div><div class="it"><span>Quotation &amp; WhatsApp / PDF<small>Customer-ready</small></span><span>Live</span></div><div class="it"><span>Cutting Optimization<small>Needs verified formulas</small></span><span>Next</span></div><div class="it"><span>Cloud sync / Invoices<small>Saved on this device only</small></span><span>Planned</span></div></div></section>
+
+<section class="pg" id="p_est" hidden><h1>New Estimate</h1>
+<div class="cd"><h2>Customer</h2><div class="g"><div><label>Name</label><input id="c_n"></div><div><label>Phone</label><input id="c_p" inputmode="tel"></div><div><label>Address</label><input id="c_ad"></div><div><label>Representative</label><input id="c_rp"></div></div></div>
+<div class="cd"><h2>Window</h2><svg id="e_dr" width="320" height="110" viewBox="0 0 320 110"></svg><div class="g">
+<div><label>Type</label><select id="e_ty"><option>Sliding</option><option>Casement</option><option>Fixed</option></select></div>
+<div><label>Brand</label><select id="e_br"></select></div>
+<div id="e_srw"><label>Series</label><select id="e_sr"></select></div>
+<div id="e_cfw"><label>Panel config</label><select id="e_cf"></select></div>
+<div id="e_saw"><label>Sash size</label><select id="e_sa"></select></div>
+<div id="e_nw"><label>Sashes</label><select id="e_n"><option>1</option><option selected>2</option><option>3</option><option>4</option></select></div>
+<div><label>Width</label><input id="e_w" type="number" value="1200" step="any" inputmode="decimal"></div>
+<div><label>Height</label><input id="e_h" type="number" value="900" step="any" inputmode="decimal"></div>
+<div><label>Window name</label><input id="e_nm" placeholder="e.g. Bedroom"></div><div><label>Location</label><input id="e_loc" placeholder="e.g. Ground floor"></div><div style="grid-column:1/3"><label>Remark</label><input id="e_rm"></div>
+<div><label>Glass</label><select id="e_gl"></select></div>
+<div><label>Unit</label><select id="e_u"><option value="1">mm</option><option value="304.8">ft</option><option value="25.4">inch</option></select></div>
+<div><label>Quick size (e.g. 4x3)</label><input id="e_qs" placeholder="4x3"></div>
+<div><label>Quantity</label><input id="e_q" type="number" value="1" min="1" inputmode="numeric"></div>
+<div><label>Colour</label><select id="e_co"><option value="W">White</option><option value="I">Ivory</option><option value="B">Black</option><option value="G">Golden Oak</option></select></div></div></div>
+<div class="tot"><span id="e_in"></span><b id="e_gt">₹0</b><span id="e_ps"></span></div>
+<button class="b" id="e_add">+ Add to quotation</button>
+<div class="cd" style="margin-top:10px"><h2>Breakdown</h2><div class="sc"><table id="e_tb"></table></div></div>
+<div class="cd"><h2>Current quotation</h2><div id="e_ql"></div><div class="it" style="font-weight:700"><span>Total</span><span id="e_qt">₹0</span></div>
+<button class="b" id="e_save">Save quotation</button><button class="b s" id="e_pv">Preview quotation</button><button class="b s hid" id="e_new">Clear / start new quotation</button><div class="sc hid" id="e_pvd" style="margin-top:8px"></div><div class="row"><button class="b w" id="e_wa">WhatsApp</button><button class="b s" id="e_pr">Print / PDF</button></div></div>
+<p class="note"><b>Safety note:</b> Profile lengths use a simplified formula and cutting deductions are not verified. Do not use this as a production cutting chart.</p></section>
+
+<section class="pg" id="p_design" hidden><h1>Window Designer</h1>
+<div class="cd"><div class="g"><div><label>Brand (60 casement)</label><select id="d_br"><option value="Ultra">Fenstech Ultra</option><option value="Fenstech">Fenstech</option></select></div>
+<div><label>Colour</label><select id="d_co"><option value="W">White</option><option value="I">Ivory</option><option value="B">Black</option><option value="G">Golden Oak</option></select></div>
+<div><label>Width (mm)</label><input id="d_w" type="number" value="1500" inputmode="numeric"></div><div><label>Height (mm)</label><input id="d_h" type="number" value="1200" inputmode="numeric"></div>
+<div><label>Quantity</label><input id="d_q" type="number" value="1" min="1" inputmode="numeric"></div><div><label>Stock bar (mm)</label><input id="d_b" type="number" value="5800" inputmode="numeric"></div></div></div>
+<div class="cd"><svg id="d_sv" viewBox="0 0 340 250" style="width:100%;touch-action:manipulation"></svg><p class="note" id="d_sel"></p>
+<div class="g"><div><label>Selected pane type</label><select id="d_ty"><option value="F">Fixed</option><option value="CL">Casement (hinge left)</option><option value="CR">Casement (hinge right)</option><option value="T">Top-hung</option></select></div><div><label>Selected pane glass</label><select id="d_pg"></select></div><div><label>Split position (mm, blank = middle)</label><input id="d_sp" type="number" inputmode="numeric"></div></div>
+<div class="row"><button class="b s" id="d_vs">Split |</button><button class="b s" id="d_hs">Split —</button><button class="b s" id="d_mg">Merge</button><button class="b s" id="d_rs">Reset</button></div></div>
+<div class="tot"><span id="d_in"></span><b id="d_gt">₹0</b><span>incl. GST</span></div><button class="b" id="d_add">+ Add to quotation</button>
+<div class="cd" style="margin-top:10px"><h2>Cutting list (nominal)</h2><div class="sc"><table id="d_cl"></table></div></div>
+<div class="cd"><h2>Bar optimization</h2><div class="sc"><table id="d_bt"></table></div></div>
+<div class="cd"><h2>Cost breakdown</h2><div class="sc"><table id="d_cb"></table></div></div>
+<p class="note"><b>Note:</b> Lengths are nominal (pane size) and exclude welding and sash deductions. Verify against your own cutting chart before production. The stock bar length is not in the catalogue, so enter your actual bar length. Use the Estimate tab for sliding windows.</p></section>
+
+<section class="pg" id="p_quotes" hidden><h1>Quotations</h1><div id="q_l"></div></section>
+
+<section class="pg" id="p_profiles" hidden><h1>Profile Master</h1><div class="cd"><div class="g"><div><label>Search</label><input id="p_s" placeholder="code or name"></div><div><label>Series</label><select id="p_f"></select></div></div><p class="note" id="p_c"></p></div><div class="cd sc"><table id="p_t"></table></div></section>
+
+<section class="pg" id="p_rates" hidden><h1>Material Rates</h1><div class="cd"><h2>Profile ₹ per kg</h2><div class="g" id="r_a"></div></div><div class="cd"><h2>Costing</h2><div class="g" id="r_b"></div></div><div class="cd"><h2>Quotation header</h2><div class="g" id="r_c"></div></div><div class="cd"><h2>Backup &amp; restore</h2><p class="note">All data is stored only in this browser. Export a backup regularly, and before clearing browser data.</p><div class="row"><button class="b s" id="bk_ex">Export backup</button><button class="b s" id="bk_cp">Copy backup</button></div>
+<label style="margin-top:10px">Restore from file</label><input id="bk_im" type="file" accept="application/json,.json"><label style="margin-top:10px">Or paste backup text</label><textarea id="bk_tx" rows="3" style="width:100%;padding:9px;border:1px solid var(--bd);border-radius:9px;background:var(--bg);color:var(--tx)"></textarea><button class="b" id="bk_ps">Restore pasted backup</button><p class="note" id="bk_st" style="margin-top:8px">No backup action yet.</p></div>
+<p class="note">Rates are saved on this device only. Default numbers are examples; enter your own.</p></section>
+</main>
+<div id="pr"></div>
+<nav><button data-go="home"><i>▦</i>Home</button><button data-go="est"><i>＋</i>Estimate</button><button data-go="design"><i>◫</i>Design</button><button data-go="quotes"><i>▤</i>Quotes</button><button data-go="profiles"><i>≡</i>Profiles</button><button data-go="rates"><i>₹</i>Rates</button></nav>
+<script>
+const PD=`UC|FUx001G|Casement Frame w/ Gasket|1.055|6|WIBG
+UC|FUx001S|Casement Frame Small|0.850|6|WIBG
+UC|FUx002|Out-Swing Window Sash|1.210|6|WIBG
+UC|FUx003|Out-Swing Door Sash|1.650|4|WIBG
+UC|FUx007|In-Swing Door Sash|1.517|4|WIBG
+UC|FUx004|T Mullion w/ Gasket|1.130|6|WIBG
+UC|FUx008|Casement 5mm Glass Bead|0.317|20|WIBG
+UC|FUx009|Casement 20mm Glass Bead|0.220|30|WIBG
+UC|FUx018|Louver Blade|0.217|20|WIBG
+UC|FUx019|Louver Shutter Bead|0.260|20|WIBG
+US|FUx051|2 Track Sliding Frame|1.100|6|WIBG
+US|FUx052A|2.5 Track Sliding Frame|1.265|6|WI
+US|FUx052|2.5 Track Sliding Frame|1.420|6|BG
+US|FUx053|3 Track Sliding Frame|1.700|4|WIBG
+US|FUx054|66mm Sash w/ Gasket|1.045|8|WIBG
+US|FUx055|85mm Sash w/ Gasket|1.250|4|WIBG
+US|FUx062|58mm Sash w/ Gasket|0.920|8|WIBG
+US|FUx059|Sliding 5mm Glass Bead|0.270|20|WIBG
+US|FUx056W|Sliding Window Mesh Sash|0.495|15|WIBG
+US|FUx056D|Sliding Door Mesh Sash|0.635|9|WIBG
+US|FUx057|Window Sash Interlock|0.227|30|WIBG
+US|FUx058|Door Sash Interlock|0.217|20|WIBG
+U8|FUx107|2 Track Sliding Frame|0.840|6|WI
+U8|FUx101S|2.5 Track Frame Small|1.080|6|WI
+U8|FUx101|2.5 Track Sliding Frame|1.200|6|WI
+U8|FUx102|55mm Sash w/ Gasket|0.784|8|WI
+U8|FUx103|66mm Sash w/ Gasket|0.910|8|WI
+U8|FUx105|Sliding 5mm Glass Bead|0.220|30|WI
+U8|FUx104|Sash Interlock|0.180|30|WI
+UA|FUx063|Sliding Sash Mullion|0.840|8|WIBG
+UA|FUx061|Sash Connector|0.310|20|WIBG
+UA|FUx021|60/90mm Coupler|0.460|15|WIBG
+UA|FUx015|Door Panel|0.900|8|WIBG
+UA|FUx011|60/60mm Coupler|0.300|20|WIBG
+UA|FUx013|90 deg Bay Pole|0.710|4|WIBG
+UA|FUx065|Mesh Sash Mullion|0.360|15|WIBG
+UA|FUx012|Box Coupler Profile|0.640|6|WIBG
+UA|FUx067|Mesh Adapter|0.540|20|WIBG
+UA|FUx022|Round Bead|0.092|50|WIBG
+FC|Fx001|Casement Frame|1.000|6|WI
+FC|Fx014|Casement Door Frame|1.350|4|WI
+FC|Fx002|Out-Swing Window Sash|1.300|4|WI
+FC|Fx006|In-Swing Window Sash|1.230|4|WI
+FC|Fx003|Out-Swing Door Sash|1.570|2|WI
+FC|Fx007|In-Swing Door Sash|1.585|2|WI
+FC|Fx004|T Mullion|1.050|4|WI
+FC|Fx005|Fly Mullion|1.080|4|WI
+FC|Fx008|5mm Glass Bead w/ Gasket|0.325|18|WI
+FC|Fx016|8mm Glass Bead|0.265|18|WI
+FC|Fx009|24mm Double Glass Bead|0.219|15|WI
+FS|Fx051|2 Track Sliding Frame|1.200|4|WI
+FS|Fx052|2.5 Track Sliding Frame|1.390|4|WI
+FS|Fx053|3 Track Sliding Frame|1.680|2|WI
+FS|Fx054G|66mm Sash w/ Gasket|1.050|6|WI
+FS|Fx055G|86mm Sash w/ Gasket|1.330|4|WI
+FS|Fx062G|57mm Sash w/ Gasket|0.885|6|WI
+FS|Fx056W|Sliding Window Mesh Sash|0.470|12|WI
+FS|Fx056D|Sliding Door Mesh Sash|0.690|9|WI
+FS|Fx057|Window Sash Interlock|0.220|15|WI
+FS|Fx066|Window Sash Interlock|0.235|15|WI
+FS|Fx058|Door Sash Interlock|0.270|15|WI
+FS|Fx059|Sliding 5mm Glass Bead|0.264|15|WI
+FS|Fx060|Sliding 20mm Glass Bead|0.190|15|WI
+FS|Fx063|Sliding Sash Mullion|0.860|4|WI
+F8|Fx107|2 Track Sliding Frame|0.850|4|WI
+F8|Fx101|2.5 Track Sliding Frame|1.030|4|WI
+F8|Fx108|3 Track Sliding Frame|1.317|4|WI
+F8|Fx102|55mm Sash w/ Gasket|0.735|6|WI
+F8|Fx103|66mm Sash w/ Gasket|0.960|6|WI
+F8|Fx109|80mm Sash w/ Gasket|1.010|4|WI
+F8|Fx105|Sliding 5mm Glass Bead|0.230|24|WI
+F8|Fx104|Sash Interlock|0.220|15|WI
+FA|Fx013|90 deg Bay Pole|0.670|4|WI
+FA|Fx012|Box Coupler Profile|0.660|4|WI
+FA|Fx011|60/60mm Coupler|0.300|10|WI
+FA|Fx021|60/90mm Coupler|0.460|15|WI
+FA|Fx015|Door Panel|0.590|5|WI
+FA|Fx022|Round Bead|0.100|30|WI
+FA|Fx065|Mesh Sash Mullion|0.450|9|WI
+FA|Fx061|Sash Connector|0.465|20|WI
+FA|Fx018|Louver Blade|0.235|20|WI
+FA|Fx019|Louver Shutter Bead L/R (Fx019/020)|0.473|10|WI`;
+const SL={UC:"Ultra 60 Casement",US:"Ultra 62/88/112 Sliding",U8:"Ultra 80 Sliding",UA:"Ultra Auxiliary",FC:"Fenstech 60 Casement",FS:"Fenstech 62/88/112 Sliding",F8:"Fenstech 80 Sliding",FA:"Fenstech Auxiliary"};
+const PL=PD.split("\n").map(l=>{const a=l.split("|");return{s:a[0],c:a[1],n:a[2],k:+a[3],p:a[4],o:a[5]}}),PM={};PL.forEach(p=>PM[p.c]=p);
+const SYS={Ultra:{c:{f:"FUx001G",s:"FUx002",m:"FUx004",b:"FUx008",b2:"FUx009"},A:{tr:{"2":"FUx051","2.5":"FUx052A","3":"FUx053"},tb:"FUx052",sa:{"85mm":"FUx055","66mm":"FUx054","58mm":"FUx062"},i:"FUx057",b:"FUx059",ms:"FUx056W"},B:{tr:{"2":"FUx107","2.5":"FUx101"},sa:{"66mm":"FUx103","55mm":"FUx102"},i:"FUx104",b:"FUx105"}},
+Fenstech:{c:{f:"Fx001",s:"Fx002",m:"Fx004",b:"Fx008",b2:"Fx009"},A:{tr:{"2":"Fx051","2.5":"Fx052","3":"Fx053"},sa:{"85mm":"Fx055G","66mm":"Fx054G","58mm":"Fx062G"},i:"Fx057",b:"Fx059",b2:"Fx060",ms:"Fx056W"},B:{tr:{"2":"Fx107","2.5":"Fx101","3":"Fx108"},sa:{"80mm":"Fx109","66mm":"Fx103","55mm":"Fx102"},i:"Fx104",b:"Fx105"}}};
+const GL=[["g1","5mm Clear",0],["g2","6mm Clear",0],["g3","8mm Clear",0],["g4","5mm Tinted/Reflective",0],["g5","6mm Toughened",0],["g6","DGU 5+12+5 (double glass)",1]],GLn=k=>GL.find(g=>g[0]===k)[1],GLd=k=>GL.find(g=>g[0]===k)[2];
+const SR={"3 Track 112mm":{y:"A",tr:"3",cf:["2 panel + Mesh","3 panel"]},"2.5 Track 88mm":{y:"A",tr:"2.5",cf:["2 panel + Mesh"]},"2.5 Track 80mm":{y:"B",tr:"2.5",cf:["2 panel + Mesh"]},"2 Track 60mm":{y:"A",tr:"2",cf:["2 panel"]}};
+const $=i=>document.getElementById(i),R=x=>Math.round(x).toLocaleString("en-IN"),M=.3048,esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const LS={g(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},s(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const RT=[["W","White ₹/kg"],["I","Ivory ₹/kg"],["B","Black ₹/kg"],["G","Golden Oak ₹/kg"]],RC=[["stm","Steel reinforcement ₹/metre"],["g1","Glass 5mm Clear ₹/sq.ft"],["g2","Glass 6mm Clear ₹/sq.ft"],["g3","Glass 8mm Clear ₹/sq.ft"],["g4","Glass 5mm Tinted ₹/sq.ft"],["g5","Glass 6mm Toughened ₹/sq.ft"],["g6","Glass DGU 5+12+5 ₹/sq.ft"],["mesh","Mesh net ₹/sq.ft"],["rRoller","Roller ₹/pc"],["nRoller","Roller per sash"],["rHandle","Handle/Lock ₹/pc"],["nHandle","Handle per sash"],["rPad","Padding ₹/pc"],["nPad","Padding per sash"],["rHinge","Hinge ₹/pc (casement)"],["nHinge","Hinge per sash"],["ohw","Other hardware ₹/window"],["ins","Installation ₹/sq.ft"],["wa","Wastage %"],["mg","Margin %"],["gst","GST %"]];
+const DEFT="1. Payment terms:\na. 100% advance along with order, if the order value is less than INR 50,000.\nb. 50% advance along with order and 50% before delivery, if the order value is more than INR 50,000.\n2. Validity of quote: 15 days.\n3. As per Govt. regulations, PAN details are mandatory for order values of Rs 2 lakhs and above.\n4. Prices are valid for size variations up to +/- 25mm per window, provided the design and style of the product remain unchanged. The customer will be charged on a pro-rata basis for any difference beyond this variation.\n5. Cleaning after handover of the windows is not in our scope.\n6. Silicone will be applied for gaps up to 5 mm only; additional filling will be charged extra as required.\n7. Rates are based on current statutory taxes, duties and levies. Any change will be passed on to the client.\n8. Civil works are not included in our scope and must be done by the client.\n9. Material unloading and storage are the client's scope.\n10. All disputes are subject to local jurisdiction only.\n11. Material will be dispatched within 2 working days of receiving the final payment.\n12. Freight is chargeable (on actuals) for all outstation work and local orders below Rs 1 Lakh. If the client splits delivery into multiple consignments, all additional costs, including freight, lead & lift and installer visit charges, will be borne by the client.\n13. Once production has started in the factory, no changes (including order cancellation) are possible.\n14. No warranty on glass. Warranty is void in case of physical damage.\n15. Safe storage of material at site and electricity for installation work are the client's responsibility.";
+const DEFC="We are very pleased that you are considering {biz} for your property.\n\nIn making this proposal, we have suggested designs which we think will enhance your property significantly. Together with the comfort and aesthetics of the inside of your home, it will also improve the facade of your building.\n\nYou can rely on and trust {biz} after-sales service. Our offer comprises:\n• Window design, specification, and value";
+const R2=x=>Number(x).toLocaleString("en-IN",{minimumFractionDigits:2,maximumFractionDigits:2});
+const rt=Object.assign({W:190,I:200,B:260,G:280,stm:55,gl:95,g1:95,g2:110,g3:160,g4:125,g5:190,g6:350,mesh:25,hw:0,rRoller:35,nRoller:2,rHandle:120,nHandle:1,rPad:15,nPad:2,rHinge:150,nHinge:2,ohw:0,ins:75,wa:8,mg:15,gst:18,biz:"MDOTPRO",ph:"",em:"",ad:"",gstn:"",logo:"",terms:DEFT,cover:DEFC,feat:"Fire resistant • UV resistant • Sound insulation • Lead free • Eco friendly"},LS.g("mp_rt",{}));if(rt.terms.startsWith("1. This is an estimate"))rt.terms=DEFT;
+let editId=null,Q=LS.g("mp_q",[]),items=LS.g("mp_items",[]),last=null,cnt=LS.g("mp_n",Q.length);
+function fill(id,arr,lab){const e=$(id),c=e.value;e.innerHTML="";arr.forEach(k=>e.add(new Option(lab?lab(k):k,k)));if(arr.includes(c))e.value=c}
+function sys(){const Y=SYS[$("e_br").value];return $("e_ty").value==="Sliding"?Y[SR[$("e_sr").value].y]:Y.c}
+function fillSr(){const sl=$("e_ty").value==="Sliding";["e_srw","e_cfw","e_saw"].forEach(i=>$(i).className=sl?"":"hid");$("e_nw").className=sl?"hid":"";if(sl){fill("e_sr",Object.keys(SR));fillCf()}}
+function fillCf(){fill("e_cf",SR[$("e_sr").value].cf);fill("e_sa",Object.keys(sys().sa))}
+function calc(){
+ const t=$("e_ty").value,b=$("e_br").value,col=$("e_co").value,u=+$("e_u").value,w=(+$("e_w").value||0)*u,h=(+$("e_h").value||0)*u,q=Math.max(1,+$("e_q").value||1),W=w/1000,H=h/1000,P=2*(W+H),L=[],gk=$("e_gl").value,y=Object.assign({},sys());if(GLd(gk)&&y.b2)y.b=y.b2;let n=+$("e_n").value,mesh=false,desc=t+" "+n+" sash";
+ if(t==="Sliding"){const r=SR[$("e_sr").value],cf=$("e_cf").value,sa=$("e_sa").value;n=cf==="3 panel"?3:2;mesh=cf.includes("Mesh");let fr=y.tr[r.tr];if(r.tr==="2.5"&&y.tb&&(col==="B"||col==="G"))fr=y.tb;
+  L.push([fr,P],[y.sa[sa],2*W+2*n*H],[y.i,(n-1+(mesh?1:0))*2*H],[y.b,2*W+2*n*H]);if(mesh)L.push([r.tr==="3"?y.sa["66mm"]:SYS[b].A.ms,W+2*H]);desc=$("e_sr").value+" "+cf+" "+sa}
+ else if(t==="Fixed")L.push([y.f,P],[y.b,P]);
+ else{L.push([y.f,P],[y.s,2*W+2*n*H]);if(n>1)L.push([y.m,(n-1)*H]);L.push([y.b,2*W+2*n*H])}
+ const rate=rt[col];let rows="<tr><th class=l>Item</th><th>m</th><th>kg</th><th>₹</th></tr>",kg=0,pc=0,sm=0;
+ L.forEach(([c,m])=>{const p=PM[c],k=m*p.k;kg+=k;pc+=k*rate;if(c!==y.b&&c!==y.i)sm+=m;rows+=`<tr><td class=l>${p.n} <small>${c}</small></td><td>${m.toFixed(2)}</td><td>${k.toFixed(2)}</td><td>${R(k*rate)}</td></tr>`});
+ const hh=hwc(t==="Sliding"?"s":"c",t==="Fixed"?0:n,mesh?1:0),st=sm*rt.stm,ar=w*h/92903.04,gl=ar*rt[gk],ml=mesh?ar/2*rt.mesh:0,wa=(pc+st)*rt.wa/100,ins=ar*rt.ins,sub=pc+st+gl+ml+hh.t+wa+ins,mg=sub*rt.mg/100,pre=sub+mg,gs=pre*rt.gst/100,unit=pre+gs,tot=unit*q;
+ const r=(a,v,k)=>`<tr><td class=l>${a}</td><td></td><td>${k||""}</td><td>${R(v)}</td></tr>`;
+ rows+=`<tr class=t><td class=l>Profile</td><td></td><td>${kg.toFixed(2)}</td><td>${R(pc)}</td></tr>`+r("Steel reinforcement ("+sm.toFixed(2)+" m)",st)+r("Glass "+GLn(gk)+" ("+ar.toFixed(1)+" sq.ft)",gl)+(ml?r("Mesh net",ml):"")+hh.o.map(x=>r(x[0],x[1])).join("")+r("Wastage",wa)+r("Installation",ins)+r("Margin",mg)+r("GST",gs)+`<tr class=t><td class=l>Per window</td><td></td><td></td><td>${R(unit)}</td></tr>`;
+ $("e_tb").innerHTML=rows+(GLd(gk)&&!y.b2?'<tr><td class=l colspan=4><small>⚠ The 20mm bead is not in the catalogue for this series; the 5mm bead was used</small></td></tr>':"");$("e_gt").textContent="₹"+R(tot);const d=Math.round(w)+"×"+Math.round(h)+" mm "+b+" "+desc+" "+$("e_co").selectedOptions[0].text+" • "+GLn(gk);
+ $("e_in").textContent=d+" • Qty "+q;$("e_ps").textContent=ar?"₹"+R(unit/ar)+" per sq.ft (incl. GST)":"";draw(t,n);const cnt=t==="Sliding"?n+(mesh?1:0):t==="Fixed"?1:n,gp=Array.from({length:cnt},(_,i)=>({x:Math.round(w/cnt*i),y:0,w:Math.round(w/cnt),h:Math.round(h),ty:t==="Sliding"?"S":t==="Fixed"?"F":(i<cnt/2?"CL":"CR"),m:mesh&&i===cnt-1?1:0}));
+ return last={d,q,unit,tot,base:pre*q,gst:gs*q,nm:$("e_nm").value||t+" Window",loc:$("e_loc").value,rm:$("e_rm").value,sz:"W = "+Math.round(w)+"  H = "+Math.round(h),area:ar,sys:(b==="Ultra"?"FENSTECH Ultra ":"FENSTECH ")+t+" series - "+(t==="Sliding"?$("e_sr").value+" ("+$("e_cf").value+", "+$("e_sa").value+" sash)":"60 mm"),gl:GLn(gk),col:$("e_co").selectedOptions[0].text,geo:{W:Math.round(w),H:Math.round(h),p:gp},pf:L.map(([c])=>PM[c].n+" ("+c+")").concat(["GI reinforcement "+sm.toFixed(2)+" m"]),ac:hh.o.filter(x=>x[1]>0).map(x=>x[0]).concat(ml?["Mesh net"]:[])}}
+function draw(t,n){const w=+$("e_w").value||1,h=+$("e_h").value||1,H=100,W=Math.min(300,H*w/h),x=(320-W)/2,c=getComputedStyle(document.body).color;let o=`<rect x="${x}" y="5" width="${W}" height="${H}" fill="#7cc4e8" fill-opacity=".35" stroke="${c}" stroke-width="4"/>`;
+ if(t!=="Fixed"){for(let i=1;i<n;i++)o+=`<line x1="${x+W*i/n}" y1="5" x2="${x+W*i/n}" y2="105" stroke="${c}" stroke-width="3"/>`;if(t==="Sliding")for(let j=0;j<n;j++)o+=`<text x="${x+W*(j+.5)/n}" y="60" font-size="14" text-anchor="middle" fill="${c}">${j%2?"←":"→"}</text>`}$("e_dr").innerHTML=o}
+const qsum=a=>a.reduce((s,x)=>s+x.tot,0);
+function rCur(){$("e_ql").innerHTML=items.map((x,i)=>`<div class="it"><span>${i+1}. ${esc(x.d)}<small>${x.q} × ₹${R(x.unit)}</small></span><span>₹${R(x.tot)}<br><a href="#" data-d="${i}">remove</a></span></div>`).join("")||'<p class="note">No windows added yet.</p>';$("e_qt").textContent="₹"+R(qsum(items));LS.s("mp_items",items);if(typeof sv==="function")sv()}
+const sk=(id,vb)=>`<svg viewBox="${vb}" class="sk">${$(id).innerHTML}</svg>`;
+function mk(){const d=new Date(),o=editId&&Q.find(x=>x.id===editId),n=cnt+1;return{id:o?o.id:Date.now(),no:o?o.no:"QTN-"+d.getFullYear()+String(d.getMonth()+1).padStart(2,"0")+"-"+String(n).padStart(4,"0"),cust:$("c_n").value,ph:$("c_p").value,ad:$("c_ad").value,rp:$("c_rp").value,date:o?o.date:d.toLocaleDateString("en-GB").replace(/\//g,"-"),items:items.slice(),total:qsum(items)}}
+function skG(g){const W=g.W,H=g.H,vw=380,vh=270,ox=40,oy=12,s=Math.min((vw-ox-14)/W,(vh-oy-58)/H),fw=W*s,fh=H*s,t="#444",ln=(a,b,c,d,x="")=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="${t}" stroke-width="1" ${x}/>`;
+ let o=`<defs><marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10z" fill="${t}"/></marker></defs><rect x="${ox}" y="${oy}" width="${fw}" height="${fh}" fill="#fff" stroke="#555" stroke-width="4"/>`;
+ g.p.forEach((p,i)=>{const x=ox+p.x*s,y=oy+p.y*s,w=p.w*s,h=p.h*s,cx=x+w/2,cy=y+h/2;o+=`<rect x="${x+3}" y="${y+3}" width="${w-6}" height="${h-6}" fill="${p.m?"#dde6df":"#bfe6f5"}" stroke="#666"/>`;
+  if(p.m)for(let k=1;k<10;k++)o+=ln(x+3,y+3+(h-6)*k/10,x+w-3,y+3+(h-6)*k/10,'stroke-opacity=".3"');
+  if(p.ty==="S"&&!p.m){const d=i<g.p.length/2?-1:1;o+=ln(cx-d*20,cy+14,cx+d*20,cy+14,'marker-end="url(#ah)"')}
+  const D='stroke-dasharray="4 3"';if(p.ty==="CL")o+=ln(x+w-3,y+3,x+3,cy,D)+ln(x+w-3,y+h-3,x+3,cy,D);if(p.ty==="CR")o+=ln(x+3,y+3,x+w-3,cy,D)+ln(x+3,y+h-3,x+w-3,cy,D);if(p.ty==="T")o+=ln(x+3,y+h-3,cx,y+3,D)+ln(x+w-3,y+h-3,cx,y+3,D);
+  o+=`<circle cx="${cx}" cy="${cy-12}" r="9" fill="#fff" stroke="#555"/><text x="${cx}" y="${cy-8.5}" font-size="10" text-anchor="middle" fill="#222">${i+1}</text>`;
+  if(p.y===0){const dy=oy+fh+16;o+=ln(x,dy,x+w,dy)+ln(x,dy-4,x,dy+4)+ln(x+w,dy-4,x+w,dy+4)+`<text x="${cx}" y="${dy-3}" font-size="9" text-anchor="middle" fill="#222">${p.w}</text>`}});
+ const dy=oy+fh+40;o+=ln(ox,dy,ox+fw,dy)+ln(ox,dy-4,ox,dy+4)+ln(ox+fw,dy-4,ox+fw,dy+4)+`<text x="${ox+fw/2}" y="${dy-3}" font-size="10" font-weight="700" text-anchor="middle" fill="#222">${W}</text>`;
+ o+=ln(ox-14,oy,ox-14,oy+fh)+ln(ox-18,oy,ox-10,oy)+ln(ox-18,oy+fh,ox-10,oy+fh)+`<text transform="translate(${ox-18} ${oy+fh/2}) rotate(-90)" font-size="10" font-weight="700" text-anchor="middle" fill="#222">${H}</text>`;
+ return `<svg viewBox="0 0 ${vw} ${vh}">${o}</svg>`}
+function qDoc(q){const bs=x=>x.base!==undefined?x.base:x.tot,b=q.items.reduce((s,x)=>s+bs(x),0),g=q.total-b,qty=q.items.reduce((s,x)=>s+x.q,0),ar=q.items.reduce((s,x)=>s+(x.area||0)*x.q,0),h2=rt.gst/2,
+ LH=()=>`<div class="lh">${rt.logo?`<img src="${rt.logo}" alt="">`:""}<div class="t"><div class="bn"><b>${esc(rt.biz)}</b></div><div>${esc(rt.ad)}</div><div>Contact No: ${esc(rt.ph)}</div><div>Email: ${esc(rt.em)}</div>${rt.gstn?`<div>GSTIN: ${esc(rt.gstn)}</div>`:""}</div></div>`,
+ TO=`<table class="kv"><tr><th>To</th><th>Address</th><th>Mobile</th></tr><tr><td>${esc(q.cust||"")}</td><td>${esc(q.ad||"")}</td><td>${esc(q.ph||"")}</td></tr><tr><th>Quote No</th><th>Date</th><th>Representative</th></tr><tr><td>${esc(q.no||"DRAFT")}</td><td>${q.date}</td><td>${esc(q.rp||"")}</td></tr></table>`,
+ li=a=>(a||[]).map(t=>`<div>${esc(t)}</div>`).join("");
+ let o=`<div class="qd"><div class="pgx">${LH()}<p>Dear ${esc(q.cust||"Customer")},</p><div style="white-space:pre-line">${esc(rt.cover.replace(/\{biz\}/g,rt.biz))}</div><p style="margin-top:30px"><b>${esc(rt.biz)}</b><br>Authorised Signatory</p></div>`;
+ q.items.forEach((x,i)=>{const a=x.area,u=bs(x)/x.q;
+  o+=`<div class="pgx">${LH()}${TO}<table class="kv" style="margin-top:6px"><tr><td class="a">Code:</td><td>W${i+1}</td><td class="a">Size:</td><td>${esc(x.sz||"")}</td></tr><tr><td class="a">Name:</td><td>${esc(x.nm||"Window")}</td><td class="a">Profile System:</td><td>${esc(x.sys||x.sp||"")}</td></tr><tr><td class="a">Location:</td><td>${esc(x.loc||"")}</td><td class="a">Glass:</td><td>${esc(x.gl||"")}</td></tr><tr><td class="a">Type:</td><td>UPVC</td><td class="a">Profile Color:</td><td>${esc(x.col||"")}</td></tr></table>
+<div class="wb"><div>${x.geo?skG(x.geo):(x.sk||"")}</div><div class="r"><table class="kv"><tr><th colspan="2">Computed Values</th></tr><tr><td>Sq.Ft.</td><td>${a?a.toFixed(2):"-"}</td></tr><tr><td>Value per Sq.Ft.</td><td>${a?R2(u/a):"-"} Rs</td></tr><tr><td>Unit Price</td><td>${R2(u)} Rs</td></tr><tr><td>Quantity</td><td>${x.q} Pcs</td></tr><tr><td>Value</td><td>${R2(bs(x))} Rs</td></tr></table><h4>Profiles</h4><div style="padding:6px">${li(x.pf)}</div><h4>Accessories</h4><div style="padding:6px">${li(x.ac)}</div><h4>Remark</h4><div style="padding:6px">${esc(x.rm||"")}</div></div></div></div>`});
+ o+=`<div class="pgx">${LH()}<table class="kv"><tr><td class="a">Base Charge</td><td>${R2(b)} Rs</td></tr><tr><td class="a">Sub Total</td><td>${R2(b)} Rs</td></tr><tr><td class="a">SGST ${h2}%</td><td>${R2(g/2)} Rs</td></tr><tr><td class="a">CGST ${h2}%</td><td>${R2(g/2)} Rs</td></tr><tr><td class="a">Grand Total</td><td><b>${R2(q.total)} Rs</b></td></tr></table><p>Total Quantity: ${qty} &nbsp; Total Area: ${ar.toFixed(2)} sq.ft${ar?` &nbsp; Avg. Price/Sq.Ft (Excl. GST): ${R2(b/ar)} Rs &nbsp; (Incl. GST): ${R2(q.total/ar)} Rs`:""}</p></div>`;
+ o+=`<div class="pgx">${LH()}<h3 style="text-align:center">Terms and Conditions</h3><div class="tc" style="font-size:11px">${esc(rt.terms)}</div><p>I hereby accept the estimate as per the above price and specifications. I have read and understood the terms &amp; conditions and agree to them.</p><div class="sg"><div>Customer signature</div><div>Authorised signatory</div></div><div class="ft">${esc(rt.feat).split("•").map(t=>`<span>${t.trim()}</span>`).join("")}</div></div></div>`;return o}
+function wa(q){let m="*"+rt.biz+" – Quotation "+(q.no||"")+"*"+(q.cust?"\nCustomer: "+q.cust:"")+"\n";q.items.forEach((x,i)=>m+=`\n${i+1}. ${x.nm||"Window"} ${x.sz||""} × ${x.q} = ₹${R(x.tot)}`);m+=`\n\n*Total: ₹${R(q.total)}* (incl. GST)`+(rt.ph?"\nContact: "+rt.ph:"");window.open("https://wa.me/?text="+encodeURIComponent(m),"_blank")}
+function pr(q){$("pr").innerHTML=qDoc(q);try{window.print()}catch(e){}}
+function rQ(){$("q_l").innerHTML=Q.map(q=>`<div class="cd"><div class="it" style="border:0"><span><b>${esc(q.cust||"Customer")}</b><small>${q.date} • ${q.items.length} items</small></span><b>₹${R(q.total)}</b></div><div class="row"><button class="b s" data-a="v" data-i="${q.id}">View</button><button class="b w" data-a="w" data-i="${q.id}">WhatsApp</button><button class="b s" data-a="e" data-i="${q.id}">Edit</button><button class="b s" data-a="p" data-i="${q.id}">Print</button><button class="b s" data-a="d" data-i="${q.id}">Delete</button></div><div class="sc hid" id="v${q.id}">${qDoc(q)}</div></div>`).join("")||'<p class="note">No quotations saved yet.</p>'}
+function fit(el){const q=el.querySelector(".qd");if(q&&el.clientWidth){q.style.zoom=Math.min(1,el.clientWidth/q.offsetWidth)}}
+function brand(){$("hb").textContent=rt.biz||"MDOTPRO";const l=$("hl");if(rt.logo){l.innerHTML=`<img class="lgi" src="${rt.logo}" alt="">`;l.style.background="transparent"}else{l.textContent="M";l.style.background=""}}
+function rHome(){brand();$("h_t").textContent=rt.biz||"MDOTPRO";$("h_lg").innerHTML=rt.logo?`<img class="lgi" style="width:56px;height:56px;margin-bottom:8px" src="${rt.logo}" alt="">`:"";
+ {const l=Q.slice(-7),mx=Math.max(1,...l.map(x=>x.total));$("h_b").innerHTML=l.map(x=>`<i title="₹${R(x.total)}" style="height:${Math.max(4,x.total/mx*100)}%"></i>`).join("")||'<p class="note" style="width:100%">No data yet.</p>'}
+$("h_q").textContent=Q.length;$("h_v").textContent="₹"+R(Q.reduce((s,x)=>s+x.total,0));$("h_p").textContent=PL.length;$("h_i").textContent=items.length;
+ $("h_r").innerHTML=Q.slice(-5).reverse().map(q=>`<div class="it"><span>${esc(q.cust||"Customer")}<small>${q.date}</small></span><b>₹${R(q.total)}</b></div>`).join("")||'<p class="note">No quotations saved yet.</p>'}
+function rProf(){const s=$("p_s").value.toLowerCase(),f=$("p_f").value,a=PL.filter(p=>(!f||p.s===f)&&(p.c+p.n).toLowerCase().includes(s));$("p_c").textContent=a.length+" profiles";
+ $("p_t").innerHTML="<tr><th class=l>Code</th><th class=l>Profile</th><th>kg/m</th><th>Pcs/bag</th><th>Col</th></tr>"+a.map(p=>`<tr><td class=l>${p.c}</td><td class=l>${p.n}<small> ${SL[p.s]}</small></td><td>${p.k.toFixed(3)}</td><td>${p.p}</td><td>${p.o}</td></tr>`).join("")}
+function rRates(){const g=(a,id)=>$(id).innerHTML=a.map(([k,l])=>`<div><label>${l}</label><input data-k="${k}" type="number" inputmode="decimal" value="${rt[k]}"></div>`).join("");g(RT,"r_a");g(RC,"r_b");
+ $("r_c").innerHTML=`<div><label>Business name</label><input data-k="biz" value="${esc(rt.biz)}"></div><div><label>Phone</label><input data-k="ph" value="${esc(rt.ph)}"></div><div><label>Email</label><input data-k="em" value="${esc(rt.em)}"></div><div><label>GST No.</label><input data-k="gstn" value="${esc(rt.gstn)}"></div><div style="grid-column:1/3"><label>Address</label><input data-k="ad" value="${esc(rt.ad)}"></div><div style="grid-column:1/3"><label>Terms &amp; conditions (printed on quotation)</label><textarea data-k="terms" rows="9" style="width:100%;padding:9px;border:1px solid var(--bd);border-radius:9px;background:var(--bg);color:var(--tx);font-size:14px">${esc(rt.terms)}</textarea></div><div style="grid-column:1/3"><label>Cover letter (use {biz} for business name)</label><textarea data-k="cover" rows="7" style="width:100%;padding:9px;border:1px solid var(--bd);border-radius:9px;background:var(--bg);color:var(--tx);font-size:14px">${esc(rt.cover)}</textarea></div><div style="grid-column:1/3"><label>Feature badges (separate with •)</label><input data-k="feat" value="${esc(rt.feat)}"></div><div style="grid-column:1/3"><label>Logo</label><input id="lgf" type="file" accept="image/*">${rt.logo?'<div style="margin-top:6px"><img class="lgi" style="width:64px;height:64px" src="'+rt.logo+'" alt=""> <a href="#" id="lgx">Remove logo</a></div>':""}</div>`}
+function go(p){document.querySelectorAll(".pg").forEach(s=>s.hidden=s.id!=="p_"+p);document.querySelectorAll("nav button").forEach(b=>b.classList.toggle("on",b.dataset.go===p));if(p==="home")rHome();if(p==="quotes")rQ();if(p==="design")dRun();scrollTo(0,0)}
+function route(){const p=(location.hash||"#home").slice(1);go(["home","est","design","quotes","profiles","rates"].includes(p)?p:"home")}
+document.addEventListener("click",e=>{const g=e.target.closest("[data-go]");if(g){location.hash=g.dataset.go;return}
+ const d=e.target.getAttribute("data-d");if(d!==null){e.preventDefault();items.splice(d,1);rCur();return}
+ const a=e.target.getAttribute("data-a");if(a){const q=Q.find(x=>x.id==e.target.dataset.i);if(!q)return;if(a==="v"){const e2=$("v"+q.id);e2.classList.toggle("hid");fit(e2)}if(a==="e"){items=q.items.slice();editId=q.id;CF.forEach((i,k)=>$(i).value=[q.cust,q.ph,q.ad,q.rp][k]||"");rCur();sv();location.hash="est"}if(a==="w")wa(q);if(a==="p")pr(q);if(a==="d"){Q=Q.filter(x=>x!==q);LS.s("mp_q",Q);rQ()}}});
+$("r_a").oninput=$("r_b").oninput=$("r_c").oninput=e=>{const k=e.target.dataset.k;if(!k)return;rt[k]=e.target.type==="number"?parseFloat(e.target.value)||0:e.target.value;LS.s("mp_rt",rt);brand();calc()};
+$("r_c").onchange=e=>{if(e.target.id!=="lgf"||!e.target.files[0])return;const fr=new FileReader();fr.onload=()=>{const im=new Image();im.onload=()=>{const k=Math.min(1,240/Math.max(im.width,im.height)),c=document.createElement("canvas");c.width=im.width*k;c.height=im.height*k;c.getContext("2d").drawImage(im,0,0,c.width,c.height);rt.logo=c.toDataURL("image/png");LS.s("mp_rt",rt);rRates();brand()};im.src=fr.result};fr.readAsDataURL(e.target.files[0])};
+$("r_c").onclick=e=>{if(e.target.id==="lgx"){e.preventDefault();rt.logo="";LS.s("mp_rt",rt);rRates();brand()}};
+$("e_pv").onclick=()=>{if(!items.length)return;const d=$("e_pvd");d.innerHTML=qDoc(mk());d.classList.toggle("hid");fit(d)};
+const bkData=()=>JSON.stringify({v:1,rt,Q,items,cnt});
+function bkLoad(t){try{const o=JSON.parse(t);if(!o||o.v!==1)throw 0;Object.assign(rt,o.rt||{});Q=o.Q||[];items=o.items||[];cnt=o.cnt||Q.length;LS.s("mp_rt",rt);LS.s("mp_q",Q);LS.s("mp_items",items);LS.s("mp_n",cnt);rRates();rCur();brand();$("bk_st").textContent="Backup restored: "+Q.length+" quotation(s)."}catch(e){$("bk_st").textContent="Invalid backup. Nothing was changed."}}
+$("bk_ex").onclick=()=>{const a=document.createElement("a");a.href=URL.createObjectURL(new Blob([bkData()],{type:"application/json"}));a.download="mdotpro-backup-"+new Date().toISOString().slice(0,10)+".json";document.body.appendChild(a);a.click();a.remove();$("bk_st").textContent="Backup file downloaded (if your browser blocked it, use Copy backup)."};
+$("bk_cp").onclick=()=>{const t=bkData();$("bk_tx").value=t;(navigator.clipboard?navigator.clipboard.writeText(t):Promise.reject()).then(()=>$("bk_st").textContent="Backup copied. Paste it into a note or message to keep it safe.",()=>$("bk_st").textContent="Select and copy the text in the box above, then save it somewhere safe.")};
+$("bk_im").onchange=e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>bkLoad(r.result);r.readAsText(f)};
+$("bk_ps").onclick=()=>bkLoad($("bk_tx").value);
+$("e_add").onclick=()=>{items.push(calc());rCur()};
+const CF=["c_n","c_p","c_ad","c_rp"];
+function sv(){$("e_save").textContent=editId?"Update quotation":"Save quotation";$("e_new").classList.toggle("hid",!editId&&!items.length)}
+$("e_save").onclick=()=>{if(!items.length)return;const q=mk();if(editId){Q=Q.map(x=>x.id===editId?q:x);editId=null}else{Q.push(q);cnt++;LS.s("mp_n",cnt)}LS.s("mp_q",Q);items=[];CF.forEach(i=>$(i).value="");rCur();sv();location.hash="quotes"};
+$("e_new").onclick=()=>{items=[];editId=null;CF.forEach(i=>$(i).value="");$("e_pvd").classList.add("hid");rCur();sv()};
+$("e_wa").onclick=()=>items.length&&wa(mk());$("e_pr").onclick=()=>items.length&&pr(mk());
+$("e_ty").onchange=()=>{fillSr();calc()};$("e_br").onchange=()=>{if($("e_ty").value==="Sliding")fillCf();calc()};$("e_sr").onchange=()=>{fillCf();calc()};
+["e_cf","e_sa","e_n","e_w","e_h","e_q","e_co","e_gl"].forEach(i=>{$(i).oninput=calc;$(i).onchange=calc});
+function hwc(k,n,m){const o=[],a=(l,rate,c)=>{if(c>0)o.push([l+" ×"+c,rate*c])};
+ if(k==="s"){a("Roller",rt.rRoller,(n+m)*rt.nRoller);a("Handle/Lock",rt.rHandle,n*rt.nHandle);a("Padding",rt.rPad,(n+m)*rt.nPad)}
+ else{a("Handle",rt.rHandle,n*rt.nHandle);a("Hinge",rt.rHinge,n*rt.nHinge);a("Padding",rt.rPad,n*rt.nPad)}
+ o.push(["Other hardware",rt.ohw]);return{o,t:o.reduce((s,x)=>s+x[1],0)}}
+let pu=1;$("e_u").onchange=()=>{const u=+$("e_u").value,f=pu/u;["e_w","e_h"].forEach(i=>$(i).value=+((+$(i).value||0)*f).toFixed(2));pu=u;calc()};
+$("e_qs").oninput=()=>{const m=$("e_qs").value.match(/(\d+(?:\.\d+)?)\s*[x×*]\s*(\d+(?:\.\d+)?)/i);if(!m)return;let a=+m[1],b=+m[2];if(a<50&&b<50){a*=304.8;b*=304.8}const u=+$("e_u").value;$("e_w").value=+(a/u).toFixed(2);$("e_h").value=+(b/u).toFixed(2);calc()};
+["e_w","e_h"].forEach(i=>$(i).addEventListener("input",()=>{$("e_qs").value=""}));$("e_u").addEventListener("change",()=>{$("e_qs").value=""});
+$("p_s").oninput=$("p_f").onchange=rProf;
+fill("e_gl",GL.map(g=>g[0]),GLn);fill("d_pg",GL.map(g=>g[0]),GLn);fill("e_br",["Ultra","Fenstech"],k=>k==="Ultra"?"Fenstech Ultra":"Fenstech");fill("p_f",[""].concat(Object.keys(SL)),k=>k?SL[k]:"Sab series");
+
+let D=LS.g("mp_d",null)||{k:"l",ty:"F"},sel=D,dP=[],dLast=null;const dd=LS.g("mp_dd",null);if(dd){$("d_w").value=dd[0];$("d_h").value=dd[1]}
+function lay(n,x,y,w,h,P,Mu){if(n.k==="l"){P.push({n,x,y,w,h});return}
+ if(n.k==="v"){const p=Math.min(Math.max(n.p,80),w-80);Mu.push(h);lay(n.a,x,y,p,h,P,Mu);lay(n.b,x+p,y,w-p,h,P,Mu)}
+ else{const p=Math.min(Math.max(n.p,80),h-80);Mu.push(w);lay(n.a,x,y,w,p,P,Mu);lay(n.b,x,y+p,w,h-p,P,Mu)}}
+function par(n,t){if(n.k==="l")return null;if(n.a===t||n.b===t)return n;return par(n.a,t)||par(n.b,t)}
+function dRun(){const W=+$("d_w").value||0,H=+$("d_h").value||0;if(W<300||H<300)return;const q=Math.max(1,+$("d_q").value||1),b=$("d_br").value,Y=SYS[b].c,col=$("d_co").value,Mu=[];
+ dP=[];lay(D,0,0,W,H,dP,Mu);if(!dP.some(p=>p.n===sel))sel=dP[0].n;
+ const mp={},add=(c,l,n)=>{const k=c+"|"+Math.round(l);mp[k]=(mp[k]||0)+n};let op=0;
+ add(Y.f,W,2);add(Y.f,H,2);Mu.forEach(l=>add(Y.m,l,1));
+ dP.forEach(p=>{const bd=GLd(p.n.g||"g1")&&Y.b2?Y.b2:Y.b;add(bd,p.w,2);add(bd,p.h,2);if(p.n.ty!=="F"){op++;add(Y.s,p.w,2);add(Y.s,p.h,2)}});
+ const cl=Object.keys(mp).map(k=>{const a=k.split("|");return{c:a[0],l:+a[1],n:mp[k]}}).sort((a,b)=>a.c.localeCompare(b.c)||b.l-a.l);let kg=0,sm=0;cl.forEach(x=>{kg+=x.l/1000*x.n*PM[x.c].k;if(x.c!==Y.b&&x.c!==Y.b2)sm+=x.l/1000*x.n});
+ const pc=kg*rt[col],st=sm*rt.stm,ar=W*H/92903.04,gl=dP.reduce((t,p)=>t+p.w*p.h/92903.04*rt[p.n.g||"g1"],0),hw=hwc("c",op,0).t,wa=(pc+st)*rt.wa/100,ins=ar*rt.ins,sub=pc+st+gl+hw+wa+ins,mg=sub*rt.mg/100,pre=sub+mg,unit=pre*(1+rt.gst/100),tot=unit*q;
+ const S=+$("d_b").value||5800,bars={};cl.forEach(x=>{bars[x.c]=bars[x.c]||[];for(let i=0;i<x.n;i++)bars[x.c].push(x.l)});
+ let bt="<tr><th class=l>Profile</th><th>Bars</th><th>Waste %</th></tr>";
+ Object.keys(bars).forEach(c=>{const a=bars[c].sort((x,y)=>y-x),B=[];a.forEach(l=>{const f=B.find(r=>r.u+l<=S);if(f)f.u+=l;else B.push({u:l})});const u=a.reduce((s,v)=>s+v,0);bt+=`<tr><td class=l>${c} ${PM[c].n}${a[0]>S?" ⚠ longer than stock bar":""}</td><td>${B.length}</td><td>${(100-u/(B.length*S)*100).toFixed(0)}</td></tr>`});
+ $("d_bt").innerHTML=bt;
+ $("d_cl").innerHTML="<tr><th class=l>Profile</th><th>Length mm</th><th>Qty</th></tr>"+cl.map(x=>`<tr><td class=l>${PM[x.c].n} <small>${x.c}</small></td><td>${x.l}</td><td>${x.n}</td></tr>`).join("");
+ const r=(a,v)=>`<tr><td class=l>${a}</td><td>${R(v)}</td></tr>`;
+ $("d_cb").innerHTML=r("Profile ("+kg.toFixed(2)+" kg)",pc)+r("Steel reinforcement",st)+r("Glass ("+ar.toFixed(1)+" sq.ft)",gl)+r("Hardware ("+op+" opening)",hw)+r("Wastage",wa)+r("Installation",ins)+r("Margin",mg)+r("GST",pre*rt.gst/100)+`<tr class=t><td class=l>Per window</td><td>${R(unit)}</td></tr>`;
+ const d=`Custom ${W}×${H}mm ${b} 60 • ${dP.length} pane`;dLast={d,q,unit,tot,base:pre*q,gst:pre*rt.gst/100*q,nm:"Custom Window",loc:"",rm:"",sz:"W = "+W+"  H = "+H,area:ar,sys:(b==="Ultra"?"FENSTECH Ultra ":"FENSTECH ")+"Casement series - 60 mm",gl:[...new Set(dP.map(p=>GLn(p.n.g||"g1")))].join(" / "),col:$("d_co").selectedOptions[0].text,geo:{W,H,p:dP.map(p=>({x:Math.round(p.x),y:Math.round(p.y),w:Math.round(p.w),h:Math.round(p.h),ty:p.n.ty}))},pf:cl.map(x=>PM[x.c].n+" ("+x.c+")").filter((v,k,a)=>a.indexOf(v)===k).concat(["GI reinforcement "+sm.toFixed(2)+" m"]),ac:hwc("c",op,0).o.filter(x=>x[1]>0).map(x=>x[0])};$("d_in").textContent=d+" • Qty "+q;$("d_gt").textContent="₹"+R(tot);
+ const sp=dP.find(x=>x.n===sel);$("d_sel").textContent="Selected: "+Math.round(sp.w)+"×"+Math.round(sp.h)+" mm pane. Tap a pane to select it.";$("d_ty").value=sel.ty;$("d_pg").value=sel.g||"g1";
+ dDraw(W,H);LS.s("mp_d",D);LS.s("mp_dd",[W,H])}
+function dDraw(W,H){const s=Math.min(270/W,200/H),ox=36,oy=12;let o="";
+ const L=(a,b,c,d)=>`<line x1="${a}" y1="${b}" x2="${c}" y2="${d}" stroke="currentColor" stroke-dasharray="4 3" pointer-events="none"/>`;
+ dP.forEach((p,i)=>{const x=ox+p.x*s,y=oy+p.y*s,w=p.w*s,h=p.h*s,t=p.n.ty,on=p.n===sel;
+  o+=`<rect data-i="${i}" x="${x}" y="${y}" width="${w}" height="${h}" fill="#7cc4e8" fill-opacity="${on?.55:.28}" stroke="${on?"#e0a82e":"currentColor"}" stroke-width="${on?4:2}"/>`;
+  if(t==="CL")o+=L(x+w,y,x,y+h/2)+L(x+w,y+h,x,y+h/2);if(t==="CR")o+=L(x,y,x+w,y+h/2)+L(x,y+h,x+w,y+h/2);if(t==="T")o+=L(x,y+h,x+w/2,y)+L(x+w,y+h,x+w/2,y);
+  o+=`<text x="${x+w/2}" y="${y+h/2+4}" font-size="11" text-anchor="middle" fill="currentColor" pointer-events="none">${Math.round(p.w)}×${Math.round(p.h)}</text>`});
+ o+=`<text x="${ox+W*s/2}" y="${oy+H*s+18}" font-size="12" text-anchor="middle" fill="currentColor">${W} mm</text><text transform="translate(12 ${oy+H*s/2}) rotate(-90)" font-size="12" text-anchor="middle" fill="currentColor">${H} mm</text>`;$("d_sv").innerHTML=o}
+function dSplit(k){const p=dP.find(x=>x.n===sel),pos=+$("d_sp").value||(k==="v"?p.w/2:p.h/2),ty=sel.ty,g=sel.g;delete sel.ty;delete sel.g;Object.assign(sel,{k,p:Math.round(pos),a:{k:"l",ty,g},b:{k:"l",ty,g}});sel=sel.a;$("d_sp").value="";dRun()}
+$("d_sv").onclick=e=>{const i=e.target.getAttribute("data-i");if(i!==null){sel=dP[i].n;dRun()}};
+$("d_ty").onchange=()=>{sel.ty=$("d_ty").value;dRun()};$("d_pg").onchange=()=>{sel.g=$("d_pg").value;dRun()};$("d_vs").onclick=()=>dSplit("v");$("d_hs").onclick=()=>dSplit("h");
+$("d_mg").onclick=()=>{const q=par(D,sel);if(!q)return;delete q.a;delete q.b;delete q.p;q.k="l";q.ty="F";sel=q;dRun()};
+$("d_rs").onclick=()=>{delete D.a;delete D.b;delete D.p;D.k="l";D.ty="F";sel=D;dRun()};
+$("d_add").onclick=()=>{dRun();if(dLast){items.push(dLast);rCur();location.hash="est"}};
+["d_br","d_co","d_w","d_h","d_q","d_b"].forEach(i=>{$(i).oninput=$(i).onchange=dRun});
+fillSr();rCur();rProf();rRates();calc();brand();sv();if("serviceWorker" in navigator&&/^https?:/.test(location.protocol))navigator.serviceWorker.register("sw.js").catch(()=>{});window.addEventListener("hashchange",route);route();
+</script></body></html>
