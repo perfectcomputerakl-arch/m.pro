@@ -1,0 +1,72 @@
+[
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx051",
+    "name": "2 Track Frame",
+    "weight_kg_m": 1.2,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx052",
+    "name": "2.5 Track Frame",
+    "weight_kg_m": 1.39,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx053",
+    "name": "3 Track Frame",
+    "weight_kg_m": 1.68,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx062G",
+    "name": "58 mm Sash",
+    "weight_kg_m": 0.885,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx054G",
+    "name": "66 mm Sash",
+    "weight_kg_m": 1.05,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx055G",
+    "name": "85 mm Sash",
+    "weight_kg_m": 1.33,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx056W",
+    "name": "Window Mesh Sash",
+    "weight_kg_m": 0.47,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx057",
+    "name": "Window Sash Interlock",
+    "weight_kg_m": 0.22,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx059",
+    "name": "Sliding 5mm Glass Bead",
+    "weight_kg_m": 0.264,
+    "source": "Fenstech catalogue"
+  },
+  {
+    "series": "FENSTECH STANDARD SLIDING 62/88/112 mm",
+    "code": "Fx063",
+    "name": "Sliding Sash Mullion",
+    "weight_kg_m": 0.86,
+    "source": "Fenstech catalogue"
+  }
+]
