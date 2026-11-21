@@ -1,0 +1,48 @@
+M.PRO CLONE - SETUP GUIDE
+=========================
+Ye MDOT PRO ka exact clone hai (admin customer-list fix ke saath). Ye ek ALAG instance hai:
+apna Cloudflare Pages project, apna D1 database, apna AUTH_SECRET, apne customers.
+MDOT PRO ka data aur login isse bilkul alag rahenge.
+
+ZIP MEIN
+  web/        -> website (Pages output directory)
+  functions/  -> login, admin, sync API (repo root mein hi rahe)
+  setup/schema.sql        -> naye D1 database ka poora schema
+  setup/make_admin_sql.js -> pehla admin login banane ka SQL generator
+
+STEP 1 - GitHub (repo: perfectcomputerakl-arch/m.pro)
+  ZIP ke teen folders (web, functions, setup) repo root mein upload karein.
+  Purani files (index.html, sw.js, manifest.json, icon.svg) root par waise hi rehne dein;
+  Pages sirf web/ folder serve karega, to unme conflict nahi hoga.
+
+STEP 2 - Naya D1 database
+  Cloudflare > Workers & Pages > D1 > Create database, naam: m-pro
+  Console mein setup/schema.sql ka poora SQL paste karke Run karein (sirf ek baar).
+
+STEP 3 - Pehla admin login (apne PC par, Node 18+)
+  node setup/make_admin_sql.js apni-email@gmail.com "StrongPassword10+" "M.PRO Admin"
+  Jo 3 INSERT lines print hon, unhe D1 Console mein paste karke Run karein.
+  (Password sirf aapke PC par rehta hai, kisi ko bhejna nahi.)
+
+STEP 4 - Cloudflare Pages project
+  Workers & Pages > Create > Pages > Connect to Git > repo m.pro
+    Framework: None | Build command: (khali) | Build output directory: web
+  Deploy hone ke baad Settings:
+    Functions > D1 database bindings > Variable name: DB  -> database m-pro
+    Variables and Secrets:
+      AUTH_SECRET = 32+ random characters (Secret)
+      ADMIN_EMAIL = wahi email jo Step 3 mein use ki
+  Phir ek baar Redeploy karein.
+
+STEP 5 - Test
+  1. https://<aapka-project>.pages.dev/api/auth/me  -> 401 Not signed in aana chahiye (503 = DB/AUTH_SECRET check karein)
+  2. /admin.html kholen, admin email/password se login karein
+  3. Ek test customer banayein; list mein turant dikhna chahiye aur counters update hone chahiye
+  4. Sign out / Sign in test karein
+
+NOTES
+  - /admin.html mein email field pehle se mdothelp@gmail.com bhari hui hai (MDOT PRO wali).
+    Apni email type kar dein, ya bolo to main usse khali kar doon.
+  - Naam/logo abhi "MDOT PRO" hi hai. M.PRO naam aur naya logo chahiye to bata dein, main badal dunga.
+  - Android APK is clone mein shamil nahi hai.
+  - Is clone mein bhi service-worker fix lagi hui hai (API cache nahi hoti).
