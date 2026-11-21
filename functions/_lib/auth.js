@@ -1,0 +1,16 @@
+export const COOKIE = 'mdot_session';
+export const SESSION_SECONDS = 60 * 60 * 24 * 7;
+export const json = (data, status=200, headers={}) => new Response(JSON.stringify(data), {status, headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store',...headers}});
+export const enc = value => new TextEncoder().encode(value);
+export const b64u = bytes => btoa(String.fromCharCode(...new Uint8Array(bytes))).replace(/\+/g,'-').replace(/\//g,'_').replace(/=+$/,'');
+export const fromB64u = value => Uint8Array.from(atob(value.replace(/-/g,'+').replace(/_/g,'/')+'='.repeat((4-value.length%4)%4)), c=>c.charCodeAt(0));
+export function cookieValue(request,name=COOKIE){const raw=request.headers.get('Cookie')||'';for(const part of raw.split(';')){const [k,...v]=part.trim().split('=');if(k===name)return v.join('=')}return null}
+export async function verify(token,secret){try{const [body,sig]=token.split('.');if(!body||!sig)return null;const key=await crypto.subtle.importKey('raw',enc(secret),{name:'HMAC',hash:'SHA-256'},false,['verify']);const valid=await crypto.subtle.verify('HMAC',key,fromB64u(sig),enc(body));if(!valid)return null;const data=JSON.parse(new TextDecoder().decode(fromB64u(body)));if(!data.exp||data.exp<Date.now()/1000)return null;return data}catch{return null}}
+export async function sign(payload,secret){const body=b64u(enc(JSON.stringify(payload)));const key=await crypto.subtle.importKey('raw',enc(secret),{name:'HMAC',hash:'SHA-256'},false,['sign']);const sig=await crypto.subtle.sign('HMAC',key,enc(body));return body+'.'+b64u(sig)}
+export function sessionCookie(token,maxAge=SESSION_SECONDS){return `${COOKIE}=${token}; Path=/; HttpOnly; Secure; SameSite=Lax; Max-Age=${maxAge}`}
+export async function passwordHash(password,salt){const key=await crypto.subtle.importKey('raw',enc(password),'PBKDF2',false,['deriveBits']);const bits=await crypto.subtle.deriveBits({name:'PBKDF2',salt:fromB64u(salt),iterations:100000,hash:'SHA-256'},key,256);return b64u(bits)}
+export function isAdmin(user,env){return !!user && ((env.ADMIN_EMAIL && user.email.toLowerCase()===String(env.ADMIN_EMAIL).toLowerCase()) || user.role==='admin' || user.role==='super_admin')}
+export async function currentUser(request,env){const token=cookieValue(request);if(!token)return null;const claims=await verify(token,env.AUTH_SECRET);if(!claims?.sub)return null;const user=await env.DB.prepare('SELECT u.id,u.tenant_id,u.email,u.role,t.company_name FROM users u JOIN tenants t ON t.id=u.tenant_id WHERE u.id=?').bind(claims.sub).first();if(!user)return null;if(isAdmin(user,env))user.role='admin';return user}
+export async function subscriptionForTenant(env,tenantId){return await env.DB.prepare("SELECT plan,status,starts_at,ends_at FROM mdot_subscriptions WHERE tenant_id=? ORDER BY updated_at DESC LIMIT 1").bind(tenantId).first()}
+export function subscriptionIsActive(sub){return !!sub && sub.status==='active' && Number.isFinite(Date.parse(sub.ends_at||'')) && Date.parse(sub.ends_at)>Date.now()}
+export async function requireActiveSubscription(user,env){if(isAdmin(user,env))return {ok:true,admin:true,plan:'Admin',status:'active',ends_at:null};const sub=await subscriptionForTenant(env,user.tenant_id);if(!subscriptionIsActive(sub))return {ok:false,subscription:sub||null};return {ok:true,plan:sub.plan,status:sub.status,ends_at:sub.ends_at};}
